@@ -72,7 +72,7 @@ int main()
             cout << "Not valid operation...!";
             break;
         }
-            cout << "Do you want to perform any other operation on these matrices..?" << endl<<"If yes then press Y or y." << endl;
+            cout << "Do you want to perform any other operation(+ or -) on these matrices..?" << endl<<"If yes then press Y or y." << endl;
             cin >> check;
         
     } while (check == 'Y' || check == 'y');
