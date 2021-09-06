@@ -39,7 +39,7 @@ int main()
     //Taking input for operation
     do
     {
-        cout << "Enter the operation that will be perform on the two matrices:";
+        cout << "Enter the operation that will be perform on the two matrices(+ or -):";
         cin >> operator_;
         switch (operator_)
         {
@@ -69,33 +69,6 @@ int main()
                 cout << endl;
             }
             break;
-        case '*':
-
-            cout << "Product of the matrices :" << endl;
-
-            for (i = 0; i < r; i++)
-            {
-                for (j = 0; j < c; j++)
-                {
-                    cout << arr1[i][j] * arr2[i][j] << " ";
-                }
-                cout << endl;
-            }
-            break;
-        case '/':
-
-            cout << "Division of the matrices :" << endl;
-
-            for (i = 0; i < r; i++)
-            {
-                for (j = 0; j < c; j++)
-                {
-                    cout << arr1[i][j] / arr2[i][j] << " ";
-                }
-                cout << endl;
-            }
-            break;
-        default:
             cout << "Not valid operation...!";
             break;
         }
