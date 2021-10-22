@@ -7,35 +7,28 @@ struct node
 {
     int info;
     struct node *link;
-} *First = NULL;
+} *First = NULL,*Last = NULL;
+
+node *init(int n){                  //initializing the node and linking as well
+    node *newNode=(node *)malloc(sizeof(node));
+    newNode->info = n;
+    newNode->link = NULL;
+    if (First==NULL)
+    {
+        First = newNode;
+        Last = newNode;
+    }
+    else
+    {
+        Last->link=newNode;
+        Last = newNode;
+    }
+    return newNode;
+}
+
 int main()
 {
     node *n1, *n2, *n3, *n4, *n5;
-    n1 = (node *)malloc(sizeof(node));
-    n1->info = 10;
-    n1->link = NULL;
-    First = n1;
-
-    n2 = (node *)malloc(sizeof(node));
-    n2->info = 20;
-    n2->link = NULL;
-    n1->link = n2;
-
-    n3 = (node *)malloc(sizeof(node));
-    n3->info = 30;
-    n3->link = NULL;
-    n2->link = n3;
-
-    n4 = (node *)malloc(sizeof(node));
-    n4->info = 40;
-    n4->link = NULL;
-    n3->link = n4;
-
-    n5 = (node *)malloc(sizeof(node));
-    n5->info = 50;
-    n5->link = NULL;
-    n4->link = n5;
-
     node *temp;
     temp = First;
     cout << "Singly Linked List:\n";
