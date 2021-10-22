@@ -29,6 +29,13 @@ node *init(int n){                  //initializing the node and linking as well
 int main()
 {
     node *n1, *n2, *n3, *n4, *n5;
+    
+    n1 = init(10);
+    n2 = init(20);
+    n3 = init(30);
+    n4 = init(40);
+    n5 = init(50);
+    
     node *temp;
     temp = First;
     cout << "Singly Linked List:\n";
