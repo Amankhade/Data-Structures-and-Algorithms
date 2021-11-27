@@ -40,7 +40,7 @@ node *Insert_At_Beginning(node *ptr, int data)
     ptr->data = data;
     ptr->next = First;
     First = ptr;
-    free(ptr);
+
     return ptr;
 }
 node *Insert_At_End(node *ptr, int data)
@@ -51,7 +51,7 @@ node *Insert_At_End(node *ptr, int data)
 
     Last->next = ptr;
     Last = ptr;
-    free(ptr);
+    
     return ptr;
 }
 node *Insert_at_certain_position(node *ptr, int position, int data)
