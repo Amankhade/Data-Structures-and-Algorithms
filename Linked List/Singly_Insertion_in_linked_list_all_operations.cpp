@@ -25,14 +25,12 @@ node *init(int data)
 }
 void display(node *ptr)
 {
-    ptr = new node;
     ptr = First;
     while (ptr != NULL)
     {
         cout << ptr->data << "-->";
         ptr = ptr->next;
     }
-    delete ptr;
 }
 node *Insert_At_Beginning(node *ptr, int data)
 {
