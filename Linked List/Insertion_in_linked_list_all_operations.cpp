@@ -78,6 +78,9 @@ int main()
     init(7);
     init(6);
     init(4);
+    cout << "Linked list before operation:\n";
+    display(First);
+    cout << "\nLinked list after operation:\n";
     Insert_At_Beginning(First, 12);
     Insert_At_End(Last, 19);
     Insert_at_certain_position(First, 2, 98);
