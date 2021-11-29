@@ -5,7 +5,7 @@ struct node
     int data;
     struct node *next;
 } *First = NULL, *Last = NULL;
-node *init(int data)
+void init(int data)
 {
     node *newNode;
     newNode = new node;
@@ -21,7 +21,6 @@ node *init(int data)
         Last->next = newNode;
         Last = newNode;
     }
-    return newNode;
 }
 void display(node *ptr)
 {
@@ -32,16 +31,15 @@ void display(node *ptr)
         ptr = ptr->next;
     }
 }
-node *Insert_At_Beginning(node *ptr, int data)
+void Insert_At_Beginning(node *ptr, int data)
 {
     ptr = (node *)malloc(sizeof(node));
     ptr->data = data;
     ptr->next = First;
     First = ptr;
 
-    return ptr;
 }
-node *Insert_At_End(node *ptr, int data)
+void Insert_At_End(node *ptr, int data)
 {
     ptr = (node *)malloc(sizeof(node));
     ptr->data = data;
@@ -49,10 +47,8 @@ node *Insert_At_End(node *ptr, int data)
 
     Last->next = ptr;
     Last = ptr;
-    
-    return ptr;
 }
-node *Insert_at_certain_position(node *ptr, int position, int data)
+void Insert_at_certain_position(node *ptr, int position, int data)
 {
     ptr = (node *)malloc(sizeof(node));
     ptr->data = data;
@@ -66,7 +62,6 @@ node *Insert_at_certain_position(node *ptr, int position, int data)
     }
     ptr->next = point->next;
     point->next = ptr;
-    return ptr;
 }
 int main()
 {
