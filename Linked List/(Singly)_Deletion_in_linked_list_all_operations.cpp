@@ -6,7 +6,7 @@ struct node
     int data;
     struct node *next;
 } *First = NULL, *Last = NULL;
-node *init(int data)
+void init(int data)
 {
     node *newNode;
     newNode = new node;
@@ -22,7 +22,6 @@ node *init(int data)
         Last->next = newNode;
         Last = newNode;
     }
-    return newNode;
 }
 void display(node *ptr)
 {
@@ -84,6 +83,7 @@ int main()
     Deletion_At_Beginning(First);
     Deletion_At_End(Last);
     Deletion_at_certain_position(First, 3);
+    display(First);
 
     return 0;
 }
