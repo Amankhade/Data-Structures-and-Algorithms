@@ -7,7 +7,7 @@ struct node
     int data;
     struct node *link;
 } *First = NULL, *Last = NULL;
-void init(int data)
+void init(int data)      
 {
     node *newNode;
     newNode = new node;
@@ -24,13 +24,13 @@ void init(int data)
         Last = newNode;
     }
 }
-void del_linked_list(node *ptr)
+void del_linked_list(node *ptr)     
 {
 
     ptr = First;
     while (ptr != NULL)
     {
-        First = First->link;
+        First = First->link;          
         free(ptr);
         ptr = First;
     }
