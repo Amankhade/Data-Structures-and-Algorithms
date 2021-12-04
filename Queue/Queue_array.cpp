@@ -5,7 +5,7 @@ using namespace std;
 int Queue[size];
 int front = 0, rear = -1;
 
-void push(int element)
+void enqueue(int element)
 {
     if (rear == size - 1)
     {
@@ -18,7 +18,7 @@ void push(int element)
     }
 }
 
-void pop()
+void dequeue()
 {
     if (rear == -1)
     {
@@ -26,7 +26,7 @@ void pop()
     }
     else
     {
-        cout << "Element popped successfully: " << Queue[front] << endl;
+        cout << "Element deleted successfully: " << Queue[front] << endl;
         front++;
     }
 }
@@ -41,15 +41,15 @@ void display()
 }
 int main()
 {
-    push(10);
-    push(20);
-    push(30);
-    push(40);
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    enqueue(40);
 
     display();
 
-    pop();
-    pop();
+    dequeue();
+    dequeue();
 
     display();
 
